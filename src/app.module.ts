@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CommonModule } from './common/common.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { FoodsModule } from './foods/foods.module';
 import configuration from './common/config/configuration';
 
 @Global()
@@ -14,6 +15,7 @@ import configuration from './common/config/configuration';
       load: [configuration],
     }),
     CommonModule,
+    FoodsModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],
